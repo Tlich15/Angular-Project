@@ -4,13 +4,13 @@ import { ResidencesComponent } from './residences/residences.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ResidenceDetailsComponent } from './residences/residence-details/residence-details.component';
-import { AddAppartementComponent } from './appartement/add-appartement/add-appartement.component';
+import { AddAppartmentComponent } from './appartement/add-appartement/add-appartement.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'/home',pathMatch:'full'},
   {path:'residence',component:ResidencesComponent},
   {path:'home',component:HomeComponent},
-  {path:'addAppart',component:AddAppartementComponent},
+  {path:'addAppart',component:AddAppartmentComponent},
   {path:'details/:id',component:ResidenceDetailsComponent}, 
   {path:'**',component:NotFoundComponent}
 ];
