@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Apartment } from 'src/core/models/Appartement';
+import { Appartment } from 'src/core/models/Appartement';
 
 @Component({
   selector: 'app-add-appartment',
@@ -8,7 +8,7 @@ import { Apartment } from 'src/core/models/Appartement';
   styleUrls: ['./add-appartement.component.css']
 })
 export class AddAppartmentComponent {
-  newApart!: Apartment;
+  newApart!: Appartment;
 
   AddAppart = new FormGroup({
   apartNum: new FormControl('', [Validators.required, Validators.pattern('^[0-9]+$')]),
@@ -57,4 +57,5 @@ resetForm() {
   });
   this.onTerraceChange();
 }
+
 }

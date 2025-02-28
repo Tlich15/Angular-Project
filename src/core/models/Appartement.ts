@@ -1,4 +1,4 @@
-export class Apartment {
+export class Appartment {
     apartNum!: number;
     floorNum!: number;
     surface!: number;
