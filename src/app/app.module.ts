@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +13,7 @@ import { FooterComponent } from './footer/footer.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ResidenceDetailsComponent } from './residences/residence-details/residence-details.component';
 import { AddAppartmentComponent } from './appartement/add-appartement/add-appartement.component';
+import { AddResidenceComponent } from './residences/add-residence/add-residence.component';
 
 @NgModule({
   declarations: [
@@ -21,12 +24,14 @@ import { AddAppartmentComponent } from './appartement/add-appartement/add-appart
     FooterComponent,
     NotFoundComponent,
     ResidenceDetailsComponent,
-    AddAppartmentComponent
+    AddAppartmentComponent,
+    AddResidenceComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     ReactiveFormsModule
   ],
   providers: [],

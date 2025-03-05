@@ -2,22 +2,34 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Residence } from '../models/Residence';
 
-
 @Injectable({
   providedIn: 'root'
 })
 export class ResidenceService {
 
-  constructor( private http: HttpClient) { }
+  residenceUrl ='http://localhost:3000/Residences';
 
-  residenceUrl ='http://localhost:3000/residences';
-
+  constructor( private http: HttpClient) { } //nzid HttpClientModule f app.module.ts
 
   getresidences(){
     return this.http.get<Residence[]>(this.residenceUrl);
-}
+  }
 
-addResidence(residence: Residence){
-  return this.http.post(this.residenceUrl, residence);
-}
+  getResidenceById(id: number){
+    return this.http.get<Residence>(`${this.residenceUrl}/${id}`);
+  }
+
+  addResidence(residence: Residence){
+    return this.http.post(this.residenceUrl, residence);
+  }
+
+  deleteResidence(id: number){
+    return this.http.delete(`${this.residenceUrl}/${id}`);
+  }
+
+  updateResidence(residence: Residence) {
+
+    return this.http.put(`http://localhost:3000/residences/${residence.id}`, residence);
+
+  }
 }
